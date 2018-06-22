@@ -13,7 +13,10 @@ FROM node:6-slim
 
 MAINTAINER Francois-Guillaume Ribreau <docker@fgribreau.com>
 
-RUN npm install redsmin -g
+WORKDIR /home/node
+COPY redsmin-*.tgz .
+
+RUN npm install redsmin-*.tgz -g
 
 ENV REDSMIN_KEY="" REDIS_URI=redis://redis:6379 REDIS_AUTH=""
 

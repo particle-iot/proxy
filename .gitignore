@@ -15,3 +15,4 @@ private/
 test/coverage
 test_results
 .nyc_output
+*.tgz
